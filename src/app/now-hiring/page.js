@@ -19,7 +19,6 @@ export default function NowHiringPage() {
           style={{ background: 'linear-gradient(135deg, rgba(0, 43, 106, 0.45) 0%, rgba(0, 43, 106, 0.65) 100%)' }}
         ></div>
         <div className="relative z-10 container text-center text-white py-24">
-          <p className="tracking-[0.35em] uppercase text-sm mb-4">Careers</p>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white">Now Hiring</h1>
           <p className="max-w-3xl mx-auto text-lg text-white">
             Join a high-performance team shaping Brillion Group’s next chapter. We’re building with purpose, innovation, and

@@ -29,7 +29,12 @@
       "Bash(done)",
       "Bash(sed:*)",
       "Read(/mnt/d/WORKSPACE/**)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Read(/mnt/d/WORKSPACE/**)",
+      "Read(/mnt/d/WORKSPACE/**)",
+      "Read(/mnt/d/WORKSPACE/**)",
+      "Bash(timeout 10 npm run dev)",
+      "Read(/mnt/d/WORKSPACE/**)"
     ],
     "deny": [],
     "ask": []

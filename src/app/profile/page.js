@@ -19,7 +19,6 @@ export default function ProfilePage() {
           style={{ background: 'linear-gradient(135deg, rgba(0, 43, 106, 0.45) 0%, rgba(0, 43, 106, 0.65) 100%)' }}
         ></div>
         <div className="relative z-10 container text-center text-white py-24">
-          <p className="tracking-[0.35em] uppercase text-sm mb-4">Leadership Profile</p>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white">Profile Name</h1>
           <p className="max-w-3xl mx-auto text-lg text-white">
             Discover the vision, experience, and accomplishments that define our leadership. This profile highlights the journey,
