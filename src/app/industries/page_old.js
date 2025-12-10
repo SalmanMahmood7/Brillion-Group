@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import Footer from '../../components/Footer';
 
 export default function Industries() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -158,7 +159,7 @@ export default function Industries() {
                       <a href="/industries/" className="current">INDUSTRIES SERVED</a>
                     </li>
                     <li id="menu-item-4251" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251">
-                      <a href="/business-consulting/">BRILLION ADVANTAGE</a>
+                      <a href="/advantage/">BRILLION ADVANTAGE</a>
                     </li>
                     <li id="menu-item-4309" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4309">
                       <a href="/about-us/">About Us</a>
@@ -343,42 +344,7 @@ export default function Industries() {
 
 
 
-      {/* Footer */}
-      <footer className="footer-clean">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-main">
-              <div className="footer-logo-section">
-                <img src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" className="footer-logo" />
-              </div>
-              <div className="footer-links-section">
-                <div className="footer-links-group">
-                  <h4>Services</h4>
-                  <a href="/advisory-services">Advisory Services</a>
-                  <a href="/bookkeeping-accounting">Bookkeeping & Accounting</a>
-                  <a href="/back-office-services">Back Office Services</a>
-                  <a href="/tax-services">Tax Services</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Company</h4>
-                  <a href="/about-us">About Us</a>
-                  <a href="/contact-us">Contact</a>
-                  <a href="/careers">Careers</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Contact</h4>
-                  <span>+1 (416) 555-0123</span>
-                  <span>info@brilliongroup.com</span>
-                  <span>Toronto, ON</span>
-                </div>
-              </div>
-            </div>
-            <div className="footer-bottom">
-              <p>&copy; 2024 Brillion Group. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

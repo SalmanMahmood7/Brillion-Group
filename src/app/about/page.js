@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Footer from '../../components/Footer';
 
 export default function About() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,15 +19,15 @@ export default function About() {
                     <span className="bt_bb_icon_holder">📍</span>
                   </div>
                   <div className="btIconWidgetContent">
-                    <span className="btIconWidgetTitle">123 Bay Street, Toronto, ON M5K 1A1</span>
+                    <span className="btIconWidgetTitle">233 Speers Rd unit 5, Oakville, ON L6K 0J5</span>
                   </div>
                 </a>
-                <a href="tel:+1-416-555-0123" title="" target="_self" className="btIconWidget btWidgetWithText">
+                <a href="tel:+647-891-2155" title="" target="_self" className="btIconWidget btWidgetWithText">
                   <div className="btIconWidgetIcon">
                     <span className="bt_bb_icon_holder">📞</span>
                   </div>
                   <div className="btIconWidgetContent">
-                    <span className="btIconWidgetTitle">+1 (416) 555-0123</span>
+                    <span className="btIconWidgetTitle">+1 (647) 891-2155</span>
                   </div>
                 </a>
               </div>
@@ -38,7 +39,7 @@ export default function About() {
             <div className="port">
               <div className="bt-horizontal-menu-trigger">
                 <div className="bt_bb_icon bt_bb_text_empty">
-                  <a href="#" target="_self" className="bt_bb_icon_holder">☰</a>
+                  <a href="#" target="_self" className="bt_bb_icon_holder" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>☰</a>
                 </div>
               </div>
               
@@ -54,32 +55,99 @@ export default function About() {
               <div className="menuPort">
                 <nav>
                   <ul id="menu-main-menu" className="menu">
-                    <li id="menu-item-8324" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8324">
+                    <li id="menu-item-8324" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8324 group relative">
                       <div className="subToggler"></div>
                       <a href="#">OUR SERVICES</a>
-                      <ul className="sub-menu">
-                        <li id="menu-item-8325" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-8325">
-                          <a href="/advisory-services/">ADVISORY SERVICES</a>
-                        </li>
-                        <li id="menu-item-8326" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-8326">
-                          <a href="/bookkeeping-accounting/">BOOKKEEPING & ACCOUNTING</a>
-                        </li>
-                        <li id="menu-item-8875" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8875">
-                          <a href="/back-office-services/">BACK OFFICE SERVICES</a>
-                        </li>
-                        <li id="menu-item-8876" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8876">
-                          <a href="/tax-services/">TAX SERVICES</a>
-                        </li>
-                      </ul>
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-30 h-30 transition-all duration-300 opacity-0 -translate-y-2 pointer-events-none invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-hover:visible">
+                        <div className="relative w-[320px] bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/95 to-slate-900/90"></div>
+                          <div className="relative z-10 p-2">
+                            <div className="space-y-1">
+                              <a className="group/item relative flex items-start space-x-3 p-4 rounded-xl hover:bg-white/10 transition-all duration-300 overflow-hidden" href="/advisory-services/" style={{animationDelay: '0ms'}}>
+                                <div className="absolute inset-0 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-orange-500 to-amber-600" style={{mixBlendMode: 'overlay'}}></div>
+                                <div className="relative">
+                                  <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover/item:shadow-xl transition-all duration-300 group-hover/item:scale-110">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-white">
+                                      <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                  </div>
+                                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl blur-xl opacity-50 group-hover/item:opacity-75 transition-opacity duration-300"></div>
+                                </div>
+                                <div className="relative flex-1 min-w-0">
+                                  <h4 className="text-sm font-semibold text-white group-hover/item:text-white transition-colors duration-300">Advisory Services</h4>
+                                  <p className="text-xs text-gray-400 mt-0.5 group-hover/item:text-gray-300 transition-colors duration-300">Strategic business guidance</p>
+                                </div>
+                              </a>
+                              <a className="group/item relative flex items-start space-x-3 p-4 rounded-xl hover:bg-white/10 transition-all duration-300 overflow-hidden" href="/bookkeeping-accounting/" style={{animationDelay: '100ms'}}>
+                                <div className="absolute inset-0 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-blue-500 to-cyan-600" style={{mixBlendMode: 'overlay'}}></div>
+                                <div className="relative">
+                                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover/item:shadow-xl transition-all duration-300 group-hover/item:scale-110">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-white">
+                                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                      <line x1="8" y1="21" x2="16" y2="21"/>
+                                      <line x1="12" y1="17" x2="12" y2="21"/>
+                                    </svg>
+                                  </div>
+                                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl blur-xl opacity-50 group-hover/item:opacity-75 transition-opacity duration-300"></div>
+                                </div>
+                                <div className="relative flex-1 min-w-0">
+                                  <h4 className="text-sm font-semibold text-white group-hover/item:text-white transition-colors duration-300">Bookkeeping & Accounting</h4>
+                                  <p className="text-xs text-gray-400 mt-0.5 group-hover/item:text-gray-300 transition-colors duration-300">Financial record management</p>
+                                </div>
+                              </a>
+                              <a className="group/item relative flex items-start space-x-3 p-4 rounded-xl hover:bg-white/10 transition-all duration-300 overflow-hidden" href="/back-office-services/" style={{animationDelay: '200ms'}}>
+                                <div className="absolute inset-0 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-purple-500 to-indigo-600" style={{mixBlendMode: 'overlay'}}></div>
+                                <div className="relative">
+                                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover/item:shadow-xl transition-all duration-300 group-hover/item:scale-110">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-white">
+                                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                      <polyline points="14,2 14,8 20,8"/>
+                                      <line x1="16" y1="13" x2="8" y2="13"/>
+                                      <line x1="16" y1="17" x2="8" y2="17"/>
+                                      <polyline points="10,9 9,9 8,9"/>
+                                    </svg>
+                                  </div>
+                                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl blur-xl opacity-50 group-hover/item:opacity-75 transition-opacity duration-300"></div>
+                                </div>
+                                <div className="relative flex-1 min-w-0">
+                                  <h4 className="text-sm font-semibold text-white group-hover/item:text-white transition-colors duration-300">Back Office Services</h4>
+                                  <p className="text-xs text-gray-400 mt-0.5 group-hover/item:text-gray-300 transition-colors duration-300">Operational support solutions</p>
+                                </div>
+                              </a>
+                              <a className="group/item relative flex items-start space-x-3 p-4 rounded-xl hover:bg-white/10 transition-all duration-300 overflow-hidden" href="/tax-services/" style={{animationDelay: '300ms'}}>
+                                <div className="absolute inset-0 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-green-500 to-emerald-600" style={{mixBlendMode: 'overlay'}}></div>
+                                <div className="relative">
+                                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover/item:shadow-xl transition-all duration-300 group-hover/item:scale-110">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-white">
+                                      <line x1="12" y1="1" x2="12" y2="23"/>
+                                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                  </div>
+                                  <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl blur-xl opacity-50 group-hover/item:opacity-75 transition-opacity duration-300"></div>
+                                </div>
+                                <div className="relative flex-1 min-w-0">
+                                  <h4 className="text-sm font-semibold text-white group-hover/item:text-white transition-colors duration-300">Tax Services</h4>
+                                  <p className="text-xs text-gray-400 mt-0.5 group-hover/item:text-gray-300 transition-colors duration-300">Comprehensive tax solutions</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/20 to-transparent rounded-full blur-3xl"></div>
+                          <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
+                        </div>
+                      </div>
                     </li>
                     <li id="menu-item-4189" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4189">
                       <a href="/industries/">INDUSTRIES SERVED</a>
                     </li>
                     <li id="menu-item-4251" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251">
-                      <a href="/business-consulting/">BRILLION ADVANTAGE</a>
+                      <a href="/advantage/">BRILLION ADVANTAGE</a>
                     </li>
                     <li id="menu-item-4309" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4309">
-                      <a href="/about-us/" className="current">About Us</a>
+                      <a href="/about-us/">About Us</a>
+                    </li>
+                    <li id="menu-item-consumer-brands" className="menu-item menu-item-type-post_type menu-item-object-page">
+                      <a href="/consumer-brands/">CONSUMER BRANDS</a>
                     </li>
                     <li id="menu-item-6562" className="workshop_btn menu-item menu-item-type-post_type menu-item-object-page menu-item-6562">
                       <a href="/contact-us/">CONTACT US</a>
@@ -218,7 +286,7 @@ export default function About() {
           
           <div className="leadership-content">
             <div className="leader-image">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tahir Sheikh" />
+              <img src="/Tahir Sheikh.png" alt="Tahir Sheikh" />
             </div>
             <div className="leader-info">
               <h3>TAHIR SHEIKH</h3>
@@ -230,41 +298,7 @@ export default function About() {
       </section>
 
       {/* Footer */}
-      <footer className="footer-clean">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-main">
-              <div className="footer-logo-section">
-                <img src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" className="footer-logo" />
-              </div>
-              <div className="footer-links-section">
-                <div className="footer-links-group">
-                  <h4>Services</h4>
-                  <a href="/advisory-services">Advisory Services</a>
-                  <a href="/bookkeeping-accounting">Bookkeeping & Accounting</a>
-                  <a href="/back-office-services">Back Office Services</a>
-                  <a href="/tax-services">Tax Services</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Company</h4>
-                  <a href="/about-us">About Us</a>
-                  <a href="/contact-us">Contact</a>
-                  <a href="/careers">Careers</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Contact</h4>
-                  <span>+1 (416) 555-0123</span>
-                  <span>info@brilliongroup.com</span>
-                  <span>Toronto, ON</span>
-                </div>
-              </div>
-            </div>
-            <div className="footer-bottom">
-              <p>&copy; 2024 Brillion Group. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

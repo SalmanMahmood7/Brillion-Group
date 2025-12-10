@@ -1,347 +1,200 @@
+'use client';
+import { useState } from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 export default function Advantage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const dottedPattern = "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002b6a' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")";
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="nav-arch">
-        <div className="container-arch">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center">
-              <a href="/" className="flex items-center">
-                <div className="brand-logo">
-                  <span className="brand-b">B</span>
-                  <span className="brand-rillion">RILLION</span>
-                </div>
-                <div className="brand-group">GROUP</div>
-              </a>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="/about" className="nav-link-arch">About Our Company</a>
-              
-              <div className="relative group">
-                <button className="nav-link-arch flex items-center">
-                  <span>Our Services</span>
-                  <svg className="ml-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-gray-200 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 space-y-3 z-50">
-                  <a href="/services" className="block text-gray-800 hover:text-blue-800 transition-colors duration-200">
-                    <div className="font-semibold">All Services</div>
-                    <div className="text-sm text-gray-600">Complete overview</div>
-                  </a>
-                  <hr className="border-gray-200" />
-                  <a href="/services#advisory" className="block text-gray-800 hover:text-blue-800 transition-colors duration-200">
-                    <div className="font-semibold">Advisory Services</div>
-                    <div className="text-sm text-gray-600">Strategic business guidance</div>
-                  </a>
-                  <a href="/services#accounting" className="block text-gray-800 hover:text-blue-800 transition-colors duration-200">
-                    <div className="font-semibold">Bookkeeping & Accounting</div>
-                    <div className="text-sm text-gray-600">Financial management</div>
-                  </a>
-                  <a href="/services#backoffice" className="block text-gray-800 hover:text-blue-800 transition-colors duration-200">
-                    <div className="font-semibold">Back Office Services</div>
-                    <div className="text-sm text-gray-600">Operational support</div>
-                  </a>
-                  <a href="/services#tax" className="block text-gray-800 hover:text-blue-800 transition-colors duration-200">
-                    <div className="font-semibold">Tax Services</div>
-                    <div className="text-sm text-gray-600">Tax planning & compliance</div>
-                  </a>
-                </div>
-              </div>
-              
-              <a href="/industries" className="nav-link-arch">Industries Served</a>
-              <a href="/advantage" className="nav-link-arch active">Brillion Advantage</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <div className="robbinex-site">
+      {/* Header */}
+      <Header />
 
       {/* Hero Section */}
-      <section className="building-bg hero-section" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
-      }}>
-        <div className="container-arch">
-          <div className="hero-content">
-            <h1 className="heading-xl text-gray-900 mb-6">
-              THE BRILLION
-              <br />
-              <span className="text-orange-500">ADVANTAGE</span>
-            </h1>
-            <div className="arch-accent mx-auto mb-6"></div>
-            <p className="text-body mb-8">
-              Discover how Brillion Group delivers exceptional results through our unique approach, 
-              proven expertise, and unwavering commitment to your success.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-arch-primary">
-                See Our Difference
-              </button>
-              <button className="btn-arch-secondary">
-                Get Started
-              </button>
+      <section className="advantage-hero-section">
+        <div className="hero-background" style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+        }}></div>
+        <div className="hero-overlay"></div>
+        <div className="container">
+          <div className="advantage-hero-content">
+            <div className="hero-text-centered">
+              <h1>THE BRILLION<br />ADVANTAGE</h1>
+              <p>Discover how Brillion Group delivers exceptional results through our unique approach, proven expertise, and unwavering commitment to your success.</p>
+              <p>With decades of experience and a client-focused methodology, we transform challenges into opportunities for sustainable business growth.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Wave Divider */}
-      <div className="wave-divider wave-blue"></div>
-
-      {/* Core Advantages */}
-      <section className="bg-light py-24 relative">
-        <div className="container-arch">
-          <div className="text-center mb-20">
-            <h2 className="heading-md text-center mb-8">WHAT SETS US APART</h2>
-            <div className="arch-accent mx-auto"></div>
-            <p className="text-body max-w-2xl mx-auto mt-8">
-              Our unique combination of expertise, innovation, and client-focused approach creates unmatched value
-            </p>
+      {/* The Advantage Section */}
+      <section className="advantage-main-section">
+        <div className="container">
+          <div className="advantage-intro">
+            <h2>THE ADVANTAGE</h2>
+            <p>Quality, innovation, and customer satisfaction drive our approach to business excellence</p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="arch-card transform hover:scale-105">
-              <div className="arch-card-body flex items-start gap-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="heading-sm text-gray-900 mb-4">Trusted Partners in Complex Solutions</h3>
-                  <p className="text-body leading-relaxed">We tackle your most challenging business problems with innovative approaches and proven methodologies, becoming your strategic partner for long-term success.</p>
-                </div>
-              </div>
-            </div>
+          <div className="advantage-showcase">
             
-            <div className="arch-card transform hover:scale-105">
-              <div className="arch-card-body flex items-start gap-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                  </svg>
+            {/* Advantage 1 */}
+            <div className="advantage-showcase-card">
+              <div className="advantage-card-content">
+                <div className="advantage-info">
+                  <div className="advantage-badge">
+                    <span className="advantage-icon"></span>
+                    <span className="advantage-category">Trusted Partners</span>
+                  </div>
+                  <h3>We are trusted partners in Complex Solutions</h3>
+                  <p>We tackle your most challenging business problems with innovative approaches and proven methodologies, becoming your strategic partner for long-term success.</p>
                 </div>
-                <div>
-                  <h3 className="heading-sm text-gray-900 mb-4">30+ Years of Global Experience</h3>
-                  <p className="text-body leading-relaxed">Three decades of expertise spanning Accounting, Taxation, Consulting, Banking & Finance, IT Implementation, Real Estate & Business Acquisitions Advisory across international markets.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="arch-card transform hover:scale-105">
-              <div className="arch-card-body flex items-start gap-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="heading-sm text-gray-900 mb-4">Customized & Client-Oriented Solutions</h3>
-                  <p className="text-body leading-relaxed">Every business is unique. We craft tailored solutions that align perfectly with your specific needs, goals, and industry requirements, ensuring maximum impact and efficiency.</p>
+                <div className="advantage-image">
+                  <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trusted Partners" />
                 </div>
               </div>
             </div>
-            
-            <div className="arch-card transform hover:scale-105">
-              <div className="arch-card-body flex items-start gap-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V7l-7-5z" clipRule="evenodd" />
-                  </svg>
+
+            {/* Advantage 2 */}
+            <div className="advantage-showcase-card">
+              <div className="advantage-card-content">
+                <div className="advantage-image">
+                  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="30+ Years Experience" />
                 </div>
-                <div>
-                  <h3 className="heading-sm text-gray-900 mb-4">One-Stop Shop for Business Needs</h3>
-                  <p className="text-body leading-relaxed">Streamline your operations with comprehensive services under one roof. From financial management to strategic planning, we handle everything so you can focus on growing your business.</p>
+                <div className="advantage-info">
+                  <div className="advantage-badge">
+                    <span className="advantage-icon"></span>
+                    <span className="advantage-category">Experience</span>
+                  </div>
+                  <h3>30+ Years experience in Accounting, Taxation, Consulting, Banking & Finance, IT Implementation, Real Estate & Business Acquisitions Advisory, Due Diligence</h3>
+                  <p>Three decades of expertise spanning multiple industries and international markets, delivering comprehensive solutions across all business verticals.</p>
                 </div>
               </div>
             </div>
+
+            {/* Advantage 3 */}
+            <div className="advantage-showcase-card">
+              <div className="advantage-card-content">
+                <div className="advantage-info">
+                  <div className="advantage-badge">
+                    <span className="advantage-icon"></span>
+                    <span className="advantage-category">Customized Solutions</span>
+                  </div>
+                  <h3>Customized & Client-Oriented Solutions</h3>
+                  <p>Every business is unique. We craft tailored solutions that align perfectly with your specific needs, goals, and industry requirements, ensuring maximum impact and efficiency.</p>
+                </div>
+                <div className="advantage-image">
+                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Customized Solutions" />
+                </div>
+              </div>
+            </div>
+
+            {/* Advantage 4 */}
+            <div className="advantage-showcase-card">
+              <div className="advantage-card-content">
+                <div className="advantage-image">
+                  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="One Stop Shop" />
+                </div>
+                <div className="advantage-info">
+                  <div className="advantage-badge">
+                    <span className="advantage-icon"></span>
+                    <span className="advantage-category">Comprehensive</span>
+                  </div>
+                  <h3>One Stop Shop for Business Needs</h3>
+                  <p>Streamline your operations with comprehensive services under one roof. From financial management to strategic planning, we handle everything so you can focus on growing your business.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Advantage 5 */}
+            <div className="advantage-showcase-card">
+              <div className="advantage-card-content">
+                <div className="advantage-info">
+                  <div className="advantage-badge">
+                    <span className="advantage-icon"></span>
+                    <span className="advantage-category">Global Reach</span>
+                  </div>
+                  <h3>International Collaborations</h3>
+                  <p>Leverage our global network of partners and collaborators to expand your business reach and access international markets with confidence and expertise.</p>
+                </div>
+                <div className="advantage-image">
+                  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="International Collaborations" />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Diagonal Divider */}
-      <div className="diagonal-divider diagonal-orange diagonal-bottom"></div>
-
-      {/* Performance Metrics */}
-      <section className="building-bg relative py-24" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
-      }}>
-        {/* Corner Design Elements */}
-        <div className="hero-corner-design corner-tr">
-          <div className="corner-bracket bracket-tr"></div>
-          <div className="corner-accent corner-accent-tr"></div>
+      {/* Results Section */}
+      <section className="py-[80px] bg-[var(--background-light)] relative">
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full" style={{ backgroundImage: dottedPattern }}></div>
         </div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#D98832]/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[#002b6a]/10 to-transparent rounded-full blur-2xl"></div>
         
-        <div className="hero-corner-design corner-bl">
-          <div className="corner-bracket bracket-bl"></div>
-          <div className="corner-accent corner-accent-bl"></div>
-        </div>
-        
-        <div className="container-arch relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
           <div className="text-center mb-16">
-            <h2 className="heading-md text-white mb-8">OUR TRACK RECORD SPEAKS VOLUMES</h2>
-            <div className="arch-accent mx-auto"></div>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="arch-card bg-white bg-opacity-10 backdrop-blur-lg border-white border-opacity-20 text-center">
-              <div className="arch-card-body">
-                <div className="w-28 h-28 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mx-auto mb-8 flex items-center justify-center shadow-2xl">
-                  <span className="text-4xl font-bold text-white">95%</span>
-                </div>
-                <h3 className="heading-sm text-white mb-4">Client Retention</h3>
-                <p className="text-body text-white leading-relaxed">
-                  Long-term partnerships built on trust, results, and exceptional service delivery
-                </p>
-              </div>
-            </div>
-            
-            <div className="arch-card bg-white bg-opacity-10 backdrop-blur-lg border-white border-opacity-20 text-center">
-              <div className="arch-card-body">
-                <div className="w-28 h-28 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full mx-auto mb-8 flex items-center justify-center shadow-2xl">
-                  <span className="text-4xl font-bold text-white">500+</span>
-                </div>
-                <h3 className="heading-sm text-white mb-4">Satisfied Clients</h3>
-                <p className="text-body text-white leading-relaxed">
-                  Businesses transformed across multiple industries and market segments
-                </p>
-              </div>
-            </div>
-            
-            <div className="arch-card bg-white bg-opacity-10 backdrop-blur-lg border-white border-opacity-20 text-center">
-              <div className="arch-card-body">
-                <div className="w-28 h-28 bg-gradient-to-br from-green-500 to-green-700 rounded-full mx-auto mb-8 flex items-center justify-center shadow-2xl">
-                  <span className="text-4xl font-bold text-white">30+</span>
-                </div>
-                <h3 className="heading-sm text-white mb-4">Years Experience</h3>
-                <p className="text-body text-white leading-relaxed">
-                  Decades of proven expertise navigating complex global markets
-                </p>
-              </div>
-            </div>
-            
-            <div className="arch-card bg-white bg-opacity-10 backdrop-blur-lg border-white border-opacity-20 text-center">
-              <div className="arch-card-body">
-                <div className="w-28 h-28 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full mx-auto mb-8 flex items-center justify-center shadow-2xl">
-                  <span className="text-4xl font-bold text-white">24/7</span>
-                </div>
-                <h3 className="heading-sm text-white mb-4">Support Available</h3>
-                <p className="text-body text-white leading-relaxed">
-                  Round-the-clock assistance and strategic guidance when you need it most
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Geometric Divider */}
-      <div className="geometric-divider"></div>
-
-      {/* CEO Quote */}
-      <section className="bg-primary">
-        <div className="container-arch section-arch">
-          <div className="max-w-4xl mx-auto text-center">
-            <blockquote className="text-2xl md:text-3xl font-medium mb-8 leading-relaxed text-white">
-              "Growth isn't something to leave to chance—it's a deliberate journey that requires the right expertise and a 
-              trusted partner by your side. At Brillion, we're here to help you navigate challenges, seize opportunities, and achieve 
-              your vision for success. Let us work together to build a stronger, more prosperous future for your business."
-            </blockquote>
-            <div className="flex items-center justify-center space-x-4">
-              <div className="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold text-white">TS</span>
-              </div>
-              <div className="text-left">
-                <cite className="text-orange-400 font-semibold text-lg block">Tahir Sheikh</cite>
-                <span className="text-white opacity-90">Chairman, Brillion Group Inc.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Curve Divider */}
-      <div className="curve-divider diagonal-primary curve-bottom"></div>
-
-      {/* Call to Action */}
-      <section className="section-arch bg-light">
-        <div className="container-arch text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="heading-md text-gray-900 mb-8">Experience the Brillion Advantage Today</h2>
-            <div className="arch-accent bg-orange-400 mx-auto mb-8"></div>
-            <p className="text-body mb-12">
-              Ready to transform your business with solutions that deliver real, measurable results? 
-              Let's start the conversation that will change your business trajectory.
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-[#002b6a]">DELIVERING</span> <span className="text-[#D98832]">EXCEPTIONAL RESULTS</span>
+            </h2>
+            <p className="text-xl text-[#002b6a] max-w-4xl mx-auto leading-relaxed">
+              Our track record speaks volumes. With 95% client retention, 500+ satisfied clients, and 30+ years of proven expertise, we don't just provide services – we deliver transformative business solutions.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <button className="btn-arch-primary">
-                Schedule Free Strategic Consultation
-              </button>
-              <button className="btn-arch-secondary">
-                Download Success Stories
-              </button>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
+            <div className="group">
+              <div className="bg-white rounded-2xl p-8 h-full border border-gray-100 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[#002b6a]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-[#D98832] to-orange-500 opacity-10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#002b6a] to-[#1e40af] p-1 shadow-lg mb-6 transition-all duration-500 group-hover:scale-110">
+                    <div className="w-full h-full bg-white rounded-2xl flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-[#002b6a]">
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#002b6a] group-hover:scale-105 transition-transform duration-300">PROVEN METHODOLOGY</h3>
+                  <p className="text-gray-600 leading-relaxed">Our systematic approach ensures consistent, measurable results across all engagements and industries.</p>
+                  <div className="mt-6 w-0 h-1 bg-gradient-to-r from-[#002b6a] to-[#D98832] group-hover:w-full transition-all duration-500 rounded-full"></div>
+                </div>
+              </div>
             </div>
+
+            <div className="group">
+              <div className="bg-white rounded-2xl p-8 h-full border border-gray-100 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[#D98832]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-[#002b6a] to-[#1e40af] opacity-10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D98832] to-orange-500 p-1 shadow-lg mb-6 transition-all duration-500 group-hover:scale-110">
+                    <div className="w-full h-full bg-white rounded-2xl flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-[#D98832]">
+                        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#D98832] group-hover:scale-105 transition-transform duration-300">CONTINUOUS INNOVATION</h3>
+                  <p className="text-gray-600 leading-relaxed">We stay ahead of industry trends and technological advances to provide cutting-edge solutions.</p>
+                  <div className="mt-6 w-0 h-1 bg-gradient-to-r from-[#D98832] to-[#002b6a] group-hover:w-full transition-all duration-500 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a href="/contact-us" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-[#002b6a] to-[#D98832] hover:from-[#001f4d] hover:to-[#c77829] rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              Experience the Advantage
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white">
-        <div className="container-arch section-arch">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <div className="brand-logo text-white">
-                  <span className="brand-b">B</span>
-                  <span className="text-white">RILLION</span>
-                </div>
-                <div className="brand-group text-gray-400">GROUP</div>
-              </div>
-              <div className="brand-tagline text-gray-400">Growth Simplified, Success Amplified</div>
-              <p className="text-small text-gray-400 mt-4">
-                Your strategic partner for sustainable business transformation and growth.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4 text-white">OUR SERVICES</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/services#advisory" className="nav-link-arch text-gray-400 hover:text-white p-0">Advisory Services</a></li>
-                <li><a href="/services#accounting" className="nav-link-arch text-gray-400 hover:text-white p-0">Bookkeeping & Accounting</a></li>
-                <li><a href="/services#backoffice" className="nav-link-arch text-gray-400 hover:text-white p-0">Back Office Services</a></li>
-                <li><a href="/services#tax" className="nav-link-arch text-gray-400 hover:text-white p-0">Tax Services</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4 text-white">INDUSTRIES</h4>
-              <ul className="space-y-2 text-gray-400 text-small">
-                <li>Construction</li>
-                <li>Real Estate</li>
-                <li>Financial Services</li>
-                <li>Manufacturing</li>
-                <li>Retail & Logistics</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4 text-white">GET STARTED</h4>
-              <p className="text-gray-400 mb-4 text-small">
-                Ready to unlock your business potential? Connect with our strategic experts today.
-              </p>
-              <button className="btn-arch-primary bg-orange-600 hover:bg-orange-700">
-                CONTACT US NOW
-              </button>
-            </div>
-          </div>
-          
-          <div className="arch-divider"></div>
-          
-          <div className="text-center text-gray-400 text-small">
-            <p>&copy; 2024 Brillion Group. All rights reserved. | Empowering businesses worldwide through strategic excellence.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

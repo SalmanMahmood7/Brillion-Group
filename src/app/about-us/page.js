@@ -1,5 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export default function About() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -7,90 +9,7 @@ export default function About() {
   return (
     <div className="robbinex-site">
       {/* Header */}
-      <header className="mainHeader bt-clear gutter">
-        <div className="main-header-inner">
-          {/* Top Bar */}
-          <div className="topBar bt-clear">
-            <div className="topBarPort port bt-clear">
-              <div className="topTools btTopToolsLeft">
-                <a href="https://maps.google.com" title="" target="_blank" className="btIconWidget btWidgetWithText">
-                  <div className="btIconWidgetIcon">
-                    <span className="bt_bb_icon_holder">📍</span>
-                  </div>
-                  <div className="btIconWidgetContent">
-                    <span className="btIconWidgetTitle">123 Bay Street, Toronto, ON M5K 1A1</span>
-                  </div>
-                </a>
-                <a href="tel:+1-416-555-0123" title="" target="_self" className="btIconWidget btWidgetWithText">
-                  <div className="btIconWidgetIcon">
-                    <span className="bt_bb_icon_holder">📞</span>
-                  </div>
-                  <div className="btIconWidgetContent">
-                    <span className="btIconWidgetTitle">+1 (416) 555-0123</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Navigation */}
-          <div className="bt-logo-area menu-holder bt-clear">
-            <div className="port">
-              <div className="bt-horizontal-menu-trigger">
-                <div className="bt_bb_icon bt_bb_text_empty">
-                  <a href="#" target="_self" className="bt_bb_icon_holder">☰</a>
-                </div>
-              </div>
-              
-              <div className="logo">
-                <span>
-                  <a href="/">
-                    <img className="btMainLogo" src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" />
-                    <img className="btAltLogo" src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" />
-                  </a>
-                </span>
-              </div>
-              
-              <div className="menuPort">
-                <nav>
-                  <ul id="menu-main-menu" className="menu">
-                    <li id="menu-item-8324" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8324">
-                      <div className="subToggler"></div>
-                      <a href="#">OUR SERVICES</a>
-                      <ul className="sub-menu">
-                        <li id="menu-item-8325" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-8325">
-                          <a href="/advisory-services/">ADVISORY SERVICES</a>
-                        </li>
-                        <li id="menu-item-8326" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-8326">
-                          <a href="/bookkeeping-accounting/">BOOKKEEPING & ACCOUNTING</a>
-                        </li>
-                        <li id="menu-item-8875" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8875">
-                          <a href="/back-office-services/">BACK OFFICE SERVICES</a>
-                        </li>
-                        <li id="menu-item-8876" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8876">
-                          <a href="/tax-services/">TAX SERVICES</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="menu-item-4189" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4189">
-                      <a href="/industries/">INDUSTRIES SERVED</a>
-                    </li>
-                    <li id="menu-item-4251" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251">
-                      <a href="/business-consulting/">BRILLION ADVANTAGE</a>
-                    </li>
-                    <li id="menu-item-4309" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4309">
-                      <a href="/about-us/" className="current">About Us</a>
-                    </li>
-                    <li id="menu-item-6562" className="workshop_btn menu-item menu-item-type-post_type menu-item-object-page menu-item-6562">
-                      <a href="/contact-us/">CONTACT US</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="about-hero-section">
@@ -136,14 +55,138 @@ export default function About() {
               </div>
             </div>
             
-            <div className="philosophy-image">
-              <div className="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Our Philosophy" />
-                <div className="image-overlay">
-                  <div className="overlay-content">
-                    <h4>Building Tomorrow</h4>
-                    <p>Through Innovation & Excellence</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="relative py-14 bg-white mb-20">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 max-w-7xl">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span style={{color:'var(--primary-blue)'}}>OUR</span> <span style={{color:'var(--primary-orange)'}}>VALUES</span>
+            </h2>
+            <p className="text-lg md:text-xl max-w-5xl mx-auto leading-relaxed" style={{color:'var(--text-secondary)'}}>
+              Excellence driven by five core principles that guide our approach to delivering exceptional business solutions.
+            </p>
+          </div>
+
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 transform -translate-x-1/2 hidden md:block" style={{backgroundColor:'var(--primary-orange)',opacity:'0.3'}}></div>
+            
+            <div className="space-y-12">
+              {/* Innovation */}
+              <div className="relative flex items-center md:justify-center">
+                <div className="flex flex-col md:flex-row items-center w-full">
+                  <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 order-2 md:order-1 ml-20 md:ml-0">
+                    <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl shadow-sm border border-blue-200">
+                      <h3 className="text-2xl font-bold mb-3" style={{color:'var(--primary-blue)'}}>INNOVATION</h3>
+                      <p className="text-gray-700">Creative solutions that drive transformative business growth</p>
+                    </div>
                   </div>
+                  <div className="absolute md:relative left-4 md:left-auto top-8 md:top-auto order-1 md:order-2">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg" style={{background:'linear-gradient(135deg, var(--primary-orange), #e89a44)'}}>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                      </svg>
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
+                      <span className="text-xs font-bold" style={{color:'var(--primary-orange)'}}>1</span>
+                    </div>
+                  </div>
+                  <div className="hidden md:block md:w-1/2 md:pl-8 order-3"></div>
+                </div>
+              </div>
+
+              {/* Integrity */}
+              <div className="relative flex items-center md:justify-center">
+                <div className="flex flex-col md:flex-row items-center w-full">
+                  <div className="hidden md:block md:w-1/2 md:pr-8 order-1"></div>
+                  <div className="absolute md:relative left-4 md:left-auto top-8 md:top-auto order-1 md:order-2">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg" style={{background:'linear-gradient(135deg, var(--primary-blue), #1a4082)'}}>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
+                      <span className="text-xs font-bold" style={{color:'var(--primary-blue)'}}>2</span>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 mb-8 md:mb-0 order-2 md:order-3 ml-20 md:ml-0">
+                    <div className="p-6 rounded-xl shadow-sm border" style={{background:'linear-gradient(to right, rgba(0, 43, 106, 0.05), rgba(0, 43, 106, 0.1))',borderColor:'rgba(0, 43, 106, 0.2)'}}>
+                      <h3 className="text-2xl font-bold mb-3" style={{color:'var(--primary-blue)'}}>INTEGRITY</h3>
+                      <p className="text-gray-700">Trust and transparency in all our business relationships</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Collaboration */}
+              <div className="relative flex items-center md:justify-center">
+                <div className="flex flex-col md:flex-row items-center w-full">
+                  <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 order-2 md:order-1 ml-20 md:ml-0">
+                    <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-xl shadow-sm border border-green-200">
+                      <h3 className="text-2xl font-bold mb-3" style={{color:'var(--primary-blue)'}}>COLLABORATION</h3>
+                      <p className="text-gray-700">Partnership focus that creates lasting value for our clients</p>
+                    </div>
+                  </div>
+                  <div className="absolute md:relative left-4 md:left-auto top-8 md:top-auto order-1 md:order-2">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg" style={{background:'linear-gradient(135deg, var(--primary-orange), #e89a44)'}}>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                      </svg>
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
+                      <span className="text-xs font-bold" style={{color:'var(--primary-orange)'}}>3</span>
+                    </div>
+                  </div>
+                  <div className="hidden md:block md:w-1/2 md:pl-8 order-3"></div>
+                </div>
+              </div>
+
+              {/* Accuracy */}
+              <div className="relative flex items-center md:justify-center">
+                <div className="flex flex-col md:flex-row items-center w-full">
+                  <div className="hidden md:block md:w-1/2 md:pr-8 order-1"></div>
+                  <div className="absolute md:relative left-4 md:left-auto top-8 md:top-auto order-1 md:order-2">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg" style={{background:'linear-gradient(135deg, var(--primary-blue), #1a4082)'}}>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                      </svg>
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
+                      <span className="text-xs font-bold" style={{color:'var(--primary-blue)'}}>4</span>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 mb-8 md:mb-0 order-2 md:order-3 ml-20 md:ml-0">
+                    <div className="p-6 rounded-xl shadow-sm border" style={{background:'linear-gradient(to right, rgba(0, 43, 106, 0.05), rgba(0, 43, 106, 0.1))',borderColor:'rgba(0, 43, 106, 0.2)'}}>
+                      <h3 className="text-2xl font-bold mb-3" style={{color:'var(--primary-blue)'}}>ACCURACY</h3>
+                      <p className="text-gray-700">Precision and reliability in every service we deliver</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Accountability */}
+              <div className="relative flex items-center md:justify-center">
+                <div className="flex flex-col md:flex-row items-center w-full">
+                  <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 order-2 md:order-1 ml-20 md:ml-0">
+                    <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-xl shadow-sm border border-purple-200">
+                      <h3 className="text-2xl font-bold mb-3" style={{color:'var(--primary-blue)'}}>ACCOUNTABILITY</h3>
+                      <p className="text-gray-700">Ownership and commitment to delivering exceptional results</p>
+                    </div>
+                  </div>
+                  <div className="absolute md:relative left-4 md:left-auto top-8 md:top-auto order-1 md:order-2">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg" style={{background:'linear-gradient(135deg, var(--primary-orange), #e89a44)'}}>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+                      </svg>
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
+                      <span className="text-xs font-bold" style={{color:'var(--primary-orange)'}}>5</span>
+                    </div>
+                  </div>
+                  <div className="hidden md:block md:w-1/2 md:pl-8 order-3"></div>
                 </div>
               </div>
             </div>
@@ -151,50 +194,74 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="values-section-modern">
-        <img src="/shape.png" alt="" className="frame-image" />
-        <div className="frame-content">
-          <div className="container">
-            <div className="values-center-content">
-              <div className="values-title">
-                <h2>OUR VALUES</h2>
+      {/* Synergy & Future Growth Section */}
+      <section className="synergy-section-new">
+        <div className="container">
+          <div className="synergy-header-new">
+            <h2 style={{color:'var(--primary-blue)'}}>SYNERGY & <span style={{color:'var(--primary-orange)'}}>FUTURE GROWTH</span></h2>
+            <p>Driving innovation through collaborative excellence and strategic integration</p>
+          </div>
+          
+          <div className="synergy-main-content">
+            <div className="creating-value-section">
+              <div className="section-content">
+                <h3 style={{color:'var(--primary-blue)'}}>Creating Value Through Synergy</h3>
+                <p style={{color:'var(--text-secondary)'}}>Our diverse portfolio fosters a powerful synergy across professional services, consumer brands, and digital infrastructure.</p>
+                
+                <div className="synergy-benefits-grid">
+                  <div className="benefit-card">
+                    <div className="benefit-icon-new" style={{background:'linear-gradient(135deg, var(--primary-orange), #e89a44)'}}>
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                      </svg>
+                    </div>
+                    <h4 style={{color:'var(--primary-blue)'}}>Cross-pollination of expertise</h4>
+                    <p style={{color:'var(--text-secondary)'}}>Knowledge sharing across divisions</p>
+                  </div>
+                  <div className="benefit-card">
+                    <div className="benefit-icon-new" style={{background:'linear-gradient(135deg, var(--primary-blue), #1a4082)'}}>
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    </div>
+                    <h4 style={{color:'var(--primary-blue)'}}>Streamlined operations</h4>
+                    <p style={{color:'var(--text-secondary)'}}>Unified processes and efficiency</p>
+                  </div>
+                  <div className="benefit-card">
+                    <div className="benefit-icon-new" style={{background:'linear-gradient(135deg, var(--primary-orange), #e89a44)'}}>
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    </div>
+                    <h4 style={{color:'var(--primary-blue)'}}>Enhanced client value</h4>
+                    <p style={{color:'var(--text-secondary)'}}>Comprehensive solution delivery</p>
+                  </div>
+                </div>
               </div>
-              
-              <div className="values-circle-layout">
-                <div className="center-content">
-                  <h3>EXCELLENCE</h3>
-                  <p>Driven by five core principles</p>
+            </div>
+            
+            <div className="future-outlook-section">
+              <div className="outlook-content">
+                <h3 style={{color:'var(--primary-blue)'}}>Future Outlook</h3>
+                <p style={{color:'var(--text-secondary)'}}>Our collaborative ecosystem positions us for sustained growth and expansion into new markets, adapting to evolving industry landscapes and consumer needs.</p>
+                
+                <div className="business-units-grid">
+                  <div className="unit-card">
+                    <h5 style={{color:'var(--primary-orange)'}}>Business Partnerships</h5>
+                    <p>Strategic alliances and collaborative ventures</p>
+                  </div>
+                  <div className="unit-card">
+                    <h5 style={{color:'var(--primary-orange)'}}>Collaborative Ventures</h5>
+                    <p>Joint initiatives and shared expertise</p>
+                  </div>
+                  <div className="unit-card">
+                    <h5 style={{color:'var(--primary-orange)'}}>Synergy Integration</h5>
+                    <p>Unified solutions and integrated approach</p>
+                  </div>
                 </div>
                 
-                <div className="value-circle innovation-circle">
-                  <div className="circle-number">01</div>
-                  <h4>INNOVATION</h4>
-                  <p>Creative solutions</p>
-                </div>
-                
-                <div className="value-circle integrity-circle">
-                  <div className="circle-number">02</div>
-                  <h4>INTEGRITY</h4>
-                  <p>Trust & transparency</p>
-                </div>
-                
-                <div className="value-circle collaboration-circle">
-                  <div className="circle-number">03</div>
-                  <h4>COLLABORATION</h4>
-                  <p>Partnership focus</p>
-                </div>
-                
-                <div className="value-circle accuracy-circle">
-                  <div className="circle-number">04</div>
-                  <h4>ACCURACY</h4>
-                  <p>Precision & reliability</p>
-                </div>
-                
-                <div className="value-circle accountability-circle">
-                  <div className="circle-number">05</div>
-                  <h4>ACCOUNTABILITY</h4>
-                  <p>Ownership & commitment</p>
+                <div className="synergy-summary">
+                  <p style={{color:'var(--primary-blue)', fontWeight:'600'}}>Synergy creates value across all business units</p>
                 </div>
               </div>
             </div>
@@ -206,7 +273,7 @@ export default function About() {
       <section className="leadership-section-new">
         <div className="container">
           <div className="leadership-header">
-            <h2>OUR LEADERSHIP</h2>
+            <h2 style={{color:'#002b6a'}}>OUR LEADERSHIP</h2>
             <p>Meet the visionary behind Brillion Group's success</p>
           </div>
           
@@ -221,7 +288,7 @@ export default function About() {
               
               <div className="profile-details">
                 <div className="name-title">
-                  <h3>TAHIR SHEIKH</h3>
+                  <h3 style={{color:'#002b6a'}}>TAHIR SHEIKH</h3>
                   <span className="position">CEO & Chairman</span>
                   <span className="company">Brillion Group Inc</span>
                 </div>
@@ -247,7 +314,7 @@ export default function About() {
               </div>
               
               <div className="expertise-areas">
-                <h4>Areas of Expertise</h4>
+                <h4 style={{color:'#002b6a'}}>Areas of Expertise</h4>
                 <div className="expertise-tags">
                   <span className="tag">Banking & Finance</span>
                   <span className="tag">Project Management</span>
@@ -262,42 +329,39 @@ export default function About() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer-clean">
+      {/* Connecting Section */}
+      <section className="connecting-section">
         <div className="container">
-          <div className="footer-content">
-            <div className="footer-main">
-              <div className="footer-logo-section">
-                <img src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" className="footer-logo" />
+          <div className="connecting-content">
+            <h2>
+              <span style={{color:'var(--primary-blue)'}}>We look Forward to</span>{' '}
+              <span style={{color:'var(--primary-orange)'}}>Connecting with you</span>
+            </h2>
+            <div className="flags-container">
+              <div className="flag-item">
+                <img src="https://flagcdn.com/w160/ca.png" alt="Canada" />
               </div>
-              <div className="footer-links-section">
-                <div className="footer-links-group">
-                  <h4>Services</h4>
-                  <a href="/advisory-services">Advisory Services</a>
-                  <a href="/bookkeeping-accounting">Bookkeeping & Accounting</a>
-                  <a href="/back-office-services">Back Office Services</a>
-                  <a href="/tax-services">Tax Services</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Company</h4>
-                  <a href="/about-us">About Us</a>
-                  <a href="/contact-us">Contact</a>
-                  <a href="/careers">Careers</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Contact</h4>
-                  <span>+1 (416) 555-0123</span>
-                  <span>info@brilliongroup.com</span>
-                  <span>Toronto, ON</span>
-                </div>
+              <div className="flag-item">
+                <img src="https://flagcdn.com/w160/nl.png" alt="Netherlands" />
               </div>
-            </div>
-            <div className="footer-bottom">
-              <p>&copy; 2024 Brillion Group. All rights reserved.</p>
+              <div className="flag-item">
+                <img src="https://flagcdn.com/w160/us.png" alt="United States" />
+              </div>
+              <div className="flag-item">
+                <img src="https://flagcdn.com/w160/pk.png" alt="Pakistan" />
+              </div>
+              <div className="flag-item">
+                <img src="https://flagcdn.com/w160/kg.png" alt="Kyrgyzstan" />
+              </div>
+              <div className="flag-item">
+                <img src="https://flagcdn.com/w160/qa.png" alt="Qatar" />
+              </div>
             </div>
           </div>
         </div>
-      </footer>
+      </section>
+
+      <Footer />
     </div>
   );
 }

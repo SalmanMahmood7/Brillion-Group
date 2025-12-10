@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        30: "7.5rem",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

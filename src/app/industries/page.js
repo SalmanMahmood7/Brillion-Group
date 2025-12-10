@@ -1,10 +1,11 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export default function Industries() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeCard, setActiveCard] = useState(0);
-  const cardsRef = useRef(null);
+  const dottedPattern = "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002b6a' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")";
 
   const industries = [
     {
@@ -57,129 +58,15 @@ export default function Industries() {
     }
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!cardsRef.current) return;
-      
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const sectionTop = cardsRef.current.offsetTop;
-      const sectionHeight = cardsRef.current.offsetHeight;
-      
-      // Calculate when section is in view and how much we've scrolled through it
-      const sectionStart = sectionTop;
-      const sectionEnd = sectionTop + sectionHeight - windowHeight;
-      
-      if (scrollTop >= sectionStart && scrollTop <= sectionEnd) {
-        // Calculate progress through the scrollable area
-        const scrollableHeight = sectionHeight - windowHeight;
-        const progress = (scrollTop - sectionStart) / scrollableHeight;
-        const cardIndex = Math.min(7, Math.max(0, Math.floor(progress * 8)));
-        setActiveCard(cardIndex);
-      } else if (scrollTop < sectionStart) {
-        setActiveCard(0);
-      } else {
-        setActiveCard(7);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className="robbinex-site">
       {/* Header */}
-      <header className="mainHeader bt-clear gutter">
-        <div className="main-header-inner">
-          {/* Top Bar */}
-          <div className="topBar bt-clear">
-            <div className="topBarPort port bt-clear">
-              <div className="topTools btTopToolsLeft">
-                <a href="https://maps.google.com" title="" target="_blank" className="btIconWidget btWidgetWithText">
-                  <div className="btIconWidgetIcon">
-                    <span className="bt_bb_icon_holder">📍</span>
-                  </div>
-                  <div className="btIconWidgetContent">
-                    <span className="btIconWidgetTitle">123 Bay Street, Toronto, ON M5K 1A1</span>
-                  </div>
-                </a>
-                <a href="tel:+1-416-555-0123" title="" target="_self" className="btIconWidget btWidgetWithText">
-                  <div className="btIconWidgetIcon">
-                    <span className="bt_bb_icon_holder">📞</span>
-                  </div>
-                  <div className="btIconWidgetContent">
-                    <span className="btIconWidgetTitle">+1 (416) 555-0123</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Navigation */}
-          <div className="bt-logo-area menu-holder bt-clear">
-            <div className="port">
-              <div className="bt-horizontal-menu-trigger">
-                <div className="bt_bb_icon bt_bb_text_empty">
-                  <a href="#" target="_self" className="bt_bb_icon_holder">☰</a>
-                </div>
-              </div>
-              
-              <div className="logo">
-                <span>
-                  <a href="/">
-                    <img className="btMainLogo" src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" />
-                    <img className="btAltLogo" src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" />
-                  </a>
-                </span>
-              </div>
-              
-              <div className="menuPort">
-                <nav>
-                  <ul id="menu-main-menu" className="menu">
-                    <li id="menu-item-8324" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8324">
-                      <div className="subToggler"></div>
-                      <a href="#">OUR SERVICES</a>
-                      <ul className="sub-menu">
-                        <li id="menu-item-8325" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-8325">
-                          <a href="/advisory-services/">ADVISORY SERVICES</a>
-                        </li>
-                        <li id="menu-item-8326" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-8326">
-                          <a href="/bookkeeping-accounting/">BOOKKEEPING & ACCOUNTING</a>
-                        </li>
-                        <li id="menu-item-8875" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8875">
-                          <a href="/back-office-services/">BACK OFFICE SERVICES</a>
-                        </li>
-                        <li id="menu-item-8876" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-8876">
-                          <a href="/tax-services/">TAX SERVICES</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="menu-item-4189" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4189">
-                      <a href="/industries/" className="current">INDUSTRIES SERVED</a>
-                    </li>
-                    <li id="menu-item-4251" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4251">
-                      <a href="/business-consulting/">BRILLION ADVANTAGE</a>
-                    </li>
-                    <li id="menu-item-4309" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4309">
-                      <a href="/about-us/">About Us</a>
-                    </li>
-                    <li id="menu-item-6562" className="workshop_btn menu-item menu-item-type-post_type menu-item-object-page menu-item-6562">
-                      <a href="/contact-us/">CONTACT US</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="industries-hero-section-new">
         <div className="hero-background" style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
         }}></div>
         <div className="hero-overlay"></div>
         <div className="container">
@@ -191,103 +78,73 @@ export default function Industries() {
             </div>
           </div>
         </div>
-        <div className="hero-frame-bottom">
-          <img src="/frame.png" alt="Decorative Frame" className="frame-image" />
-        </div>
       </section>
 
-      {/* Industries Sticky Cards */}
-      <section className="industries-sticky-section" ref={cardsRef}>
-        {/* Header */}
-        <div className="sticky-section-header">
-          <div className="container">
-            <h2 className="sticky-section-title">EMPOWERING BUSINESSES IN EVERY SECTOR</h2>
-            <p className="sticky-section-subtitle">Your success is our mission. We bring industry-specific insights and proven strategies to drive growth across all business landscapes.</p>
-          </div>
+      {/* Industries Section */}
+      <section className="py-[60px] bg-[var(--background-light)] relative">
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full" style={{ backgroundImage: dottedPattern }}></div>
         </div>
-        
-        {/* Sticky Cards Area */}
-        <div className="sticky-cards-wrapper">
-          <div className="sticky-cards-background">
-            <div className="sticky-cards-viewport">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] items-start px-6 md:px-10 pt-12">
+            <aside className="lg:sticky lg:top-36 lg:pr-8">
+              <div className="space-y-6" style={{color: 'var(--primary-blue)'}}>
+                <h2 className="text-3xl md:text-4xl font-bold leading-relaxed" style={{color: '#1e3a8a'}}>
+                  EMPOWERING BUSINESSES IN{' '}
+                  <span style={{color: '#D98832'}}>EVERY SECTOR</span>
+                </h2>
+                <p className="text-base md:text-lg leading-relaxed" style={{color: 'var(--text-secondary)'}}>Your success is our mission. We bring industry-specific insights and proven strategies to drive growth across all business landscapes.</p>
+                <ul className="space-y-3 text-sm" style={{color: 'var(--text-secondary)'}}>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full" style={{backgroundColor: 'var(--primary-orange)'}}></span>
+                    Industry-specific expertise and specialized solutions
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full" style={{backgroundColor: 'var(--primary-orange)'}}></span>
+                    Proven track record across diverse business sectors
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full" style={{backgroundColor: 'var(--primary-orange)'}}></span>
+                    Comprehensive support and strategic guidance
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <div className="grid gap-6 md:gap-8 lg:pt-4">
               {industries.map((industry, index) => (
-                <div 
-                  key={industry.id}
-                  className={`industry-sticky-card ${activeCard === index ? 'card-active' : 'card-hidden'}`}
-                >
-                  <div className="sticky-card-content">
-                    <div className="card-background-design">
-                      <div className="card-pattern-overlay"></div>
-                      <div className="card-gradient-accent"></div>
-                    </div>
-                    
-                    <div className="sticky-card-header">
-                      <div className="card-number-container">
-                        <div className="sticky-card-number">{String(index + 1).padStart(2, '0')}</div>
-                      </div>
-                      <div className="card-title-container">
-                        <div className="card-subtitle">INDUSTRY FOCUS</div>
-                        <h3 className="sticky-card-title">{industry.title}</h3>
-                      </div>
-                    </div>
-                    
-                    <div className="sticky-card-description">
-                      <p>{industry.description}</p>
-                      <div className="card-footer">
-                        <div className="expertise-tags">
-                          <span className="tag">Expert Solutions</span>
-                          <span className="tag">Proven Results</span>
+                <article key={industry.id} className="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="relative h-48 md:h-56 w-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>
+                    <div className="relative h-full p-6 md:p-8 flex flex-col justify-between text-white">
+                      <div className="flex items-start justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-4 w-full">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm shrink-0">
+                            <span className="text-lg font-bold text-white">{String(index + 1).padStart(2, '0')}</span>
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div className="text-xs font-semibold uppercase tracking-wider text-blue-200">INDUSTRY FOCUS</div>
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold break-words" style={{color: '#D98832'}}>{industry.title}</h3>
+                          </div>
                         </div>
-                        <div className="card-arrow">→</div>
+                      </div>
+                      <div className="flex items-center gap-3 text-blue-200">
+                        <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium">Expert Solutions</span>
+                        <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium">Proven Results</span>
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div className="p-6 md:p-8 space-y-4">
+                    <p className="text-sm md:text-base leading-relaxed" style={{color: 'var(--text-secondary)'}}>{industry.description}</p>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
         </div>
-        
-        {/* Scroll Space */}
-        <div className="scroll-spacer" />
       </section>
 
-      {/* Footer */}
-      <footer className="footer-clean">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-main">
-              <div className="footer-logo-section">
-                <img src="/BRILLION GROUP LOGO PNG.png" alt="Brillion Group" className="footer-logo" />
-              </div>
-              <div className="footer-links-section">
-                <div className="footer-links-group">
-                  <h4>Services</h4>
-                  <a href="/advisory-services">Advisory Services</a>
-                  <a href="/bookkeeping-accounting">Bookkeeping & Accounting</a>
-                  <a href="/back-office-services">Back Office Services</a>
-                  <a href="/tax-services">Tax Services</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Company</h4>
-                  <a href="/about-us">About Us</a>
-                  <a href="/contact-us">Contact</a>
-                  <a href="/careers">Careers</a>
-                </div>
-                <div className="footer-links-group">
-                  <h4>Contact</h4>
-                  <span>+1 (416) 555-0123</span>
-                  <span>info@brilliongroup.com</span>
-                  <span>Toronto, ON</span>
-                </div>
-              </div>
-            </div>
-            <div className="footer-bottom">
-              <p>&copy; 2024 Brillion Group. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

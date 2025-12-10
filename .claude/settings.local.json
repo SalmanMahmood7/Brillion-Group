@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(pkill:*)",
+      "Read(/mnt/d/WORKSPACE/Brillion Group/**)",
+      "Read(/mnt/d/WORKSPACE/Brillion Group/**)",
+      "Read(/mnt/d/WORKSPACE/Brillion Group/**)",
+      "Read(/mnt/d/WORKSPACE/Brillion Group/**)",
+      "Bash(npm run lint)",
+      "WebFetch(domain:www.robbinex.com)",
+      "Bash(killall:*)",
+      "Read(/mnt/d/WORKSPACE/**)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(git checkout:*)",
+      "Bash(grep:*)",
+      "Bash(for:*)",
+      "Bash(do sed -i '/hero-frame-bottom/,+2d' \"$file\")",
+      "Bash(done)",
+      "Bash(sed:*)",
+      "Read(/mnt/d/WORKSPACE/**)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
