@@ -64,7 +64,7 @@ export default function Industries() {
       <Header />
 
       {/* Hero Section */}
-      <section className="industries-hero-section-new">
+      <section className="industries-hero-section-new min-h-[70vh] flex items-center">
         <div className="hero-background" style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
         }}></div>

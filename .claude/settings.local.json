@@ -34,6 +34,7 @@
       "Read(/mnt/d/WORKSPACE/**)",
       "Read(/mnt/d/WORKSPACE/**)",
       "Bash(timeout 10 npm run dev)",
+      "Read(/mnt/d/WORKSPACE/**)",
       "Read(/mnt/d/WORKSPACE/**)"
     ],
     "deny": [],

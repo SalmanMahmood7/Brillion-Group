@@ -33,7 +33,7 @@ export default function DigitalServiceDetail({ params }) {
       <Header />
 
       <section
-        className="relative py-32 text-white overflow-hidden"
+        className="relative min-h-[70vh] flex items-center justify-center text-white overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(120deg, rgba(7, 13, 29, 0.92), rgba(7, 13, 29, 0.65)), url('${heroImage}')`,
           backgroundSize: 'cover',
@@ -46,9 +46,9 @@ export default function DigitalServiceDetail({ params }) {
           <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <div className="container mx-auto px-6 lg:px-12 max-w-6xl relative z-10">
-          <div className="flex items-center mb-6">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center mr-3" style={{ backgroundColor: accentColor }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-6xl relative z-10 py-14 lg:py-24 text-center md:text-left">
+          <div className="mb-6 space-y-3 sm:space-y-0 sm:flex sm:items-center sm:justify-center md:justify-start">
+            <div className="w-8 h-8 rounded-full inline-flex items-center justify-center mr-3" style={{ backgroundColor: accentColor }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" className="text-white">
                 <path d="M12 2L2 7h10l-1 8 10-12h-9l1-8z"/>
               </svg>
@@ -56,12 +56,12 @@ export default function DigitalServiceDetail({ params }) {
             <p className="text-sm uppercase tracking-[0.3em] text-gray-200 font-semibold">Digital Solutions</p>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          <h1 className="text-[clamp(32px,8vw,64px)] font-bold leading-tight mb-6 sm:mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             {title}
           </h1>
-          
+
           {partnerBadge && (
-            <div className="inline-flex items-center rounded-full border border-white/30 px-6 py-2 text-sm font-semibold tracking-wide text-white/90 mb-8 bg-white/10 backdrop-blur-sm">
+            <div className="hidden md:inline-flex items-center rounded-full border border-white/30 px-6 py-2 text-sm font-semibold tracking-wide text-white/90 mb-8 bg-white/10 backdrop-blur-sm mx-auto md:mx-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" className="mr-2 text-yellow-400">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -69,9 +69,11 @@ export default function DigitalServiceDetail({ params }) {
             </div>
           )}
           
-          <p className="text-lg md:text-xl text-gray-100 max-w-4xl leading-relaxed mb-10">{summary}</p>
+          <p className="hidden md:block text-[clamp(16px,4.8vw,22px)] text-gray-100 max-w-3xl md:max-w-4xl leading-relaxed mb-8 sm:mb-10 mx-auto md:mx-0">
+            {summary}
+          </p>
           
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Link
               href="/contact-us"
               className="inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
